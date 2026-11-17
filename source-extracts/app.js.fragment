@@ -1,0 +1,10 @@
+// Readable app.js fragment from the supplied screen recording.
+// One derived word IS the state of all four of them.
+function mood() {
+  // the secret is on screen — the caret doesn't matter
+  if (shown && pw.value) return 'exposed';
+  if (at === pw) return 'shy';
+  if (at === mail) return 'nosy';
+  return 'idle';
+}
+auth.dataset.mood = mood();

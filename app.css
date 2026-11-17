@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+:root{--ink:#141318;--muted:#85828b;--purple:#5825ed;--paper:#fff;--bg:#0b0a12}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 52% 30%,#1d1931 0%,#100e1a 45%,#090910 100%);color:#f7f5fa;font-family:"DM Sans",sans-serif}
+.browser{height:54px;background:#0a0910;border-bottom:1px solid #252331;display:flex;align-items:center;padding:0 22px;position:relative}
+.traffic{display:flex;gap:8px}.traffic i{width:11px;height:11px;border-radius:50%;background:#ff5d55}.traffic i:nth-child(2){background:#ffbf3c}.traffic i:nth-child(3){background:#39c85a}
+.browser-brand{position:absolute;left:50%;transform:translateX(-50%);font:700 13px Manrope;letter-spacing:.4px;white-space:nowrap}.browser-brand span{color:#85808f}.browser-brand b{color:#9e82ff}.browser-brand strong{color:#8eb9ff}.browser-brand em{color:#f2c84e;font-style:normal}.path{margin-left:auto;color:#777482;font:11px "DM Mono"}
+.page{width:min(830px,calc(100% - 32px));margin:48px auto 42px;text-align:center}
+.component{font:500 10px "DM Mono";letter-spacing:2px;color:#777184;margin-bottom:13px}
+.logo{font:700 30px Manrope;letter-spacing:-1px;margin:0 0 31px;color:#f8f6fb}
+.login-card{width:100%;min-height:510px;border-radius:20px;background:#fff;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 20px 65px #0007;text-align:left;color:var(--ink)}
+.art-panel{background:#eeebf2;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative;min-height:510px}
+.faces{width:88%;max-width:370px;height:auto;overflow:visible;margin:0 0 29px 2px}
+.character{transform-box:fill-box;transform-origin:center bottom;transition:transform .38s cubic-bezier(.2,.8,.2,1)}
+.face-eyes{transition:opacity .18s}.eye{fill:none;stroke:#17131b;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;transition:all .2s}.mouth{fill:none;stroke:#17131b;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;transition:all .2s}
+.form-panel{background:#fff;display:flex;justify-content:center;align-items:flex-start;padding:31px 34px 25px;min-width:0}
+.form-content{width:100%;max-width:350px}
+.spark{text-align:center;font-size:26px;line-height:1;margin:0 0 26px;color:#0d0c11}
+h2{font:700 25px Manrope;letter-spacing:-.7px;text-align:center;margin:0 0 8px;color:#151319}
+.intro{text-align:center;font-size:12px;color:#96939b;margin:0 0 31px}
+.field{display:block;margin:0 0 24px}.field>span{display:block;font-size:11px;color:#77747d;margin-bottom:7px}
+.field input{width:100%;height:30px;border:0;border-bottom:1px solid #d7d4dc;outline:0;border-radius:0;background:transparent;color:#24212a;font:14px "DM Sans";padding:0 1px 8px;transition:border-color .2s,box-shadow .2s}
+.field input:focus{border-bottom:2px solid #6433e8;box-shadow:0 2px 0 -1px #6433e8}
+.password-wrap{position:relative}.password-wrap input{padding-right:33px}.eye-toggle{position:absolute;right:0;bottom:5px;border:0;background:transparent;color:#5c34c5;font-size:18px;cursor:pointer;width:27px;height:25px}
+.form-options{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:1px 0 23px}.remember{display:flex;align-items:center;gap:7px;font-size:11px;color:#77747c;cursor:pointer;position:relative}.remember input{position:absolute;opacity:0;width:1px;height:1px}.checkmark{width:16px;height:16px;background:#17151b;color:white;border-radius:4px;display:grid;place-items:center;font-size:11px;font-weight:700}.remember input:not(:checked)+.checkmark{background:white;border:1px solid #bdb9c2;color:transparent}
+.text-button,.signup button{border:0;background:transparent;padding:0;color:#77747c;font:600 11px "DM Sans";cursor:pointer}.text-button:hover,.signup button:hover{text-decoration:underline}
+.login-btn{height:49px;width:100%;border:0;border-radius:28px;background:#111015;color:#fff;font:600 13px "DM Sans";cursor:pointer;transition:transform .2s,background .2s}.login-btn:hover{background:#32216c;transform:translateY(-1px)}
+.or{display:flex;align-items:center;gap:12px;color:#aaa6ae;font-size:11px;margin:19px 0}.or span{height:1px;background:#e5e2e8;flex:1}
+.google-btn{width:100%;height:49px;border:0;border-radius:28px;background:#f2f1f5;color:#3c3941;font:600 13px "DM Sans";cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s}.google-btn:hover{background:#e9e6ef}.google-g{font:bold 17px Arial;background:conic-gradient(from -45deg,#4285f4 0 25%,#34a853 0 50%,#fbbc05 0 70%,#ea4335 0 85%,#4285f4 0);background-clip:text;-webkit-text-fill-color:transparent}
+.signup{text-align:center;font-size:11px;color:#92909a;margin:23px 0 0}.signup button{color:#5c2adf;font-weight:700}
+.feedback{text-align:center;color:#5a31c5;font-size:11px;min-height:14px;margin:9px 0 0}
+.caption{margin:31px auto 0;text-align:center}.caption p{font-size:14px;color:#f0edf6;margin:0 0 8px}.demo-credentials{display:flex;justify-content:center;align-items:center;gap:8px;color:#827c8e;font-size:11px}.demo-credentials code{background:#24212e;padding:4px 8px;border-radius:5px;color:#d4cfdd;font:11px "DM Mono"}
+.code-panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:15px 18px 18px;background:#0b0a12;border-top:1px solid #211f2a}
+.code-panel{border:1px solid #292537;border-radius:15px;overflow:hidden;background:#100e1b;min-width:0;min-height:240px}
+.code-panel h3{height:39px;border-bottom:1px solid #292537;margin:0;padding:0 13px;display:flex;align-items:center;gap:8px;font:700 13px Manrope;color:#c3b4ff}
+.code-panel h3 i{width:11px;height:11px;border-radius:4px;background:#a98aff}.css-code h3{color:#a6caff}.css-code h3 i{background:#8fc2ff}.js-code h3{color:#f4d36e}.js-code h3 i{background:#f5c74f}
+pre{margin:0;padding:13px 12px;color:#b5a9d2;font:10px/1.65 "DM Mono",monospace;white-space:pre;overflow:auto}.css-code pre{color:#a9c9e9}.js-code pre{color:#e8c985}
+/* Password mood states: one data attribute coordinates all characters. */
+[data-mood="idle"] .purple{transform:rotate(-4deg) translateY(0)}
+[data-mood="idle"] .orange{transform:translateY(0)}
+[data-mood="idle"] .yellow{transform:translateY(0)}
+[data-mood="shy"] .purple{transform:rotate(-16deg) translate(-8px,-5px)}
+[data-mood="shy"] .orange{transform:translateY(3px)}
+[data-mood="shy"] .yellow{transform:rotate(4deg) translate(5px,-2px)}
+[data-mood="nosy"] .purple{transform:rotate(-7deg) translate(7px,-2px)}
+[data-mood="nosy"] .yellow{transform:rotate(-4deg) translate(-5px,-2px)}
+[data-mood="exposed"] .purple{transform:rotate(-13deg) translate(-5px,-9px)}
+[data-mood="exposed"] .orange{transform:translateY(5px)}
+[data-mood="exposed"] .yellow{transform:rotate(3deg) translate(3px,-4px)}
+[data-mood="exposed"] .purple .eye{stroke-width:3.5}
+[data-mood="exposed"] .orange .mouth{d:path("M88 220 Q119 205 150 220")}
+[data-mood="exposed"] .yellow .mouth{d:path("M239 187 Q264 199 289 185")}
+[data-mood="shy"] .purple .mouth{d:path("M96 128 Q112 134 128 128")}
+@media(max-width:760px){.page{margin:30px auto}.login-card{grid-template-columns:1fr;max-width:500px;margin:auto}.art-panel{min-height:230px;max-height:230px;order:2}.faces{width:58%;max-width:260px;margin-bottom:7px}.form-panel{order:1;padding:28px 25px}.spark{margin-bottom:18px}.intro{margin-bottom:23px}.code-panels{grid-template-columns:1fr}.code-panel{min-height:190px}.path{display:none}}
+@media(max-width:420px){.browser{padding:0 13px}.browser-brand{font-size:10px}.page{width:calc(100% - 22px)}.logo{margin-bottom:22px}.form-panel{padding:24px 20px}.login-card{border-radius:16px}.form-options{align-items:flex-start}.remember,.text-button{font-size:10px}.caption p{font-size:12px}}

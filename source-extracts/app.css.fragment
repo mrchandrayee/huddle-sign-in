@@ -1,0 +1,18 @@
+/* Readable app.css fragment from the supplied screen recording. */
+
+/* one word poses the cast */
+[data-mood="exposed"] .mate {
+  --v-open: 0;
+  --v-shy: 1;
+}
+.mate--tall {
+  --rot: -9;
+  --bend: -22;
+  --dy: -3.9;
+}
+
+/* every lean is paid for with the lift it costs:
+   dy = -(w/2h) * sin(rot) */
+.mate {
+  transform: translateY(calc(var(--dy) * 1%)) rotate(...);
+}

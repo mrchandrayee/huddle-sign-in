@@ -1,0 +1,19 @@
+<!-- Transcribed from the readable index.html panel in the video. -->
+<!-- every face he can wear, drawn once, up front -->
+<g class="face">
+  <g class="face__eyes is-open">
+    <!-- open-eye facial group -->
+  </g>
+  <g class="face__eyes is-shut">
+    <!-- shut-eye facial group -->
+  </g>
+  <g class="face__eyes is-peek">
+    <!-- peeking-eye facial group -->
+  </g>
+  <g class="face__mouth is-o"></g>
+  <g class="face__mouth is-sad"></g>
+  <g class="face__mouth is-grin"></g>
+</g>
+
+<!-- turned around = no face at all,
+     so nothing extra is needed for it -->

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0a12"><title>Huddle — Sign in</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="browser">
+  <div class="traffic"><i></i><i></i><i></i></div>
+  <div class="browser-brand">HUDDLE <span>—</span> <b>HTML</b> · <strong>CSS</strong> · <em>JS</em></div>
+  <div class="path">localhost / huddle</div>
+</header>
+<main class="page">
+  <div class="component">COMPONENT · 88 · SIGN-IN</div>
+  <h1 class="logo">Huddle</h1>
+  <section class="login-card">
+    <div class="art-panel">
+      <svg class="faces" viewBox="0 0 370 260" role="img" aria-label="Four playful characters reacting to your password">
+        <!-- purple character -->
+        <g class="character purple">
+          <g transform="rotate(-13 112 135)">
+            <rect x="65" y="35" width="94" height="154" rx="2" fill="#5925ef"/>
+            <g class="face-eyes">
+              <ellipse class="eye eye-left" cx="94" cy="94" rx="5" ry="3.5"/>
+              <ellipse class="eye eye-right" cx="129" cy="94" rx="5" ry="3.5"/>
+            </g>
+            <path class="mouth" d="M96 126 Q112 113 128 126" />
+          </g>
+        </g>
+        <!-- dark quiet character -->
+        <g class="character quiet">
+          <rect x="162" y="91" width="78" height="156" rx="14" fill="#15151a"/>
+        </g>
+        <!-- yellow character -->
+        <g class="character yellow">
+          <path d="M221 246 L221 157 Q221 111 264 111 Q308 111 308 157 L308 246Z" fill="#f3cb08"/>
+          <g class="face-eyes">
+            <path class="eye" d="M239 158 q7 -8 14 0" />
+            <path class="eye" d="M276 158 q7 -8 14 0" />
+          </g>
+          <path class="mouth" d="M239 187 Q251 178 263 187 Q276 195 289 185"/>
+        </g>
+        <!-- orange character in front -->
+        <g class="character orange">
+          <path d="M16 246 A99 99 0 0 1 214 246Z" fill="#ff762d"/>
+          <g class="face-eyes">
+            <path class="eye" d="M81 193 q9 -11 18 0"/>
+            <path class="eye" d="M137 193 q9 -11 18 0"/>
+          </g>
+          <path class="mouth" d="M88 220 Q119 195 150 220"/>
+        </g>
+      </svg>
+    </div>
+    <div class="form-panel">
+      <div class="spark">✦</div>
+      <div class="form-content" id="formContent">
+        <h2>Welcome back</h2>
+        <p class="intro">Please enter your details.</p>
+        <form id="loginForm" novalidate>
+          <label class="field">
+            <span>Email</span>
+            <input id="email" type="email" autocomplete="username" value="hasib@gmail.com" placeholder="you@example.com">
+          </label>
+          <label class="field password-field">
+            <span>Password</span>
+            <div class="password-wrap">
+              <input id="password" type="password" autocomplete="current-password" value="" placeholder="Enter your password">
+              <button type="button" class="eye-toggle" id="eyeToggle" aria-label="Show password">⌁</button>
+            </div>
+          </label>
+          <div class="form-options">
+            <label class="remember"><input type="checkbox" id="remember" checked><span class="checkmark">✓</span><span>Remember for 30 days</span></label>
+            <button type="button" class="text-button" id="forgot">Forgot password?</button>
+          </div>
+          <button class="login-btn" type="submit">Log in</button>
+          <div class="or"><span></span>or<span></span></div>
+          <button class="google-btn" type="button" id="google"><span class="google-g">G</span>Log in with Google</button>
+          <p class="signup">Don't have an account? <button type="button" id="signup">Sign up</button></p>
+          <p class="feedback" id="feedback" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="caption">
+    <p id="captionText">Type your password. Watch them look away.</p>
+    <div class="demo-credentials"><code>hasib@gmail.com</code><span>·</span><code>hasib123</code></div>
+  </div>
+</main>
+<footer class="code-panels">
+  <article class="code-panel html-code"><h3><i></i> index.html</h3><pre><code>&lt;!-- every face he can wear,
+     drawn once, up front --&gt;
+&lt;g class="face"&gt;
+  &lt;g class="face__eyes is-open"&gt;
+    &lt;g class="face__eyes is-shut"&gt;
+    &lt;g class="face__eyes is-peek"&gt;
+  &lt;g class="face__mouth is-o"&gt;
+  &lt;g class="face__mouth is-sad"&gt;
+  &lt;g class="face__mouth is-grin"&gt;
+&lt;/g&gt;
+
+&lt;!-- turned around = no face
+     at all, so nothing extra
+     is needed for it --&gt;</code></pre></article>
+  <article class="code-panel css-code"><h3><i></i> app.css</h3><pre><code>/* one word poses the cast */
+[data-mood="exposed"] .mate {
+  --v-open: 0; --v-shy: 1;
+}
+.mate--tall { --rot: -9;
+  --bend: -22; --dy: -3.9; }
+
+/* every lean is paid for
+   with the lift it costs:
+   dy = -(w/2h)*sin[rot] */
+.mate {
+  transform: translateY(
+    calc(var(--dy) * 1%)
+  ) rotate(...);
+}</code></pre></article>
+  <article class="code-panel js-code"><h3><i></i> app.js</h3><pre><code>// one derived word IS the
+// state of all four of them
+function mood() {
+  // the secret is on screen —
+  // the caret doesn't matter
+  if (shown &amp;&amp; pw.value)
+    return 'exposed';
+  if (at === pw) return 'shy';
+  if (at === mail) return 'nosy';
+  return 'idle';
+}
+auth.dataset.mood = mood();</code></pre></article>
+</footer>
+<script src="app.js"></script>
+</body></html>
